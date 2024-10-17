@@ -23,7 +23,7 @@ export const signin = async (req, res, next) => {
     }
     const validPassword = await bcryptjs.compare(password, validUser.password);
     if (!validPassword) {
-      return next(401, "Wrong credentials");
+      return next(errorHandler(401, "Wrong credentials"));
     }
     const token = jsonwebtoken.sign(
       { id: validUser._id },
