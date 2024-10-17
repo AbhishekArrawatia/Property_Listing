@@ -76,7 +76,7 @@ const Signup = () => {
       onChange={handleChange}"
       >
         <p>Have an account?</p>
-        <Link to={"/sign-up"}>
+        <Link to={"/sign-in"}>
           <span className="text-blue-700">sign in</span>
         </Link>
       </div>
